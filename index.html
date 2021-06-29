@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>SOCH</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Redressed&display=swap" rel="stylesheet">
+<meta name="viewport" content="width = device-width, initial scale=1">
+<link rel="stylesheet" href="homecss.css"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+</head>
+<body id="body1">
+<section id="banner">
+	<img src="D:\WEBSITE\SOCH - SITE\LOGO\pngwhite.png" class="img">
+	<div id="nav-btn">
+		<img src="nav.png" id = "menu">
+	</div>
+	<div class="b-text">
+		<h1>SOCH</h1>
+		<p><i>Stories of Common Humans</i></p>
+	
+	<div class="btn-cont">
+		<a href="stories.html"><span></span>Read stories</a>
+	</div>
+	</div>
+</section>
+<section id="body1">
+	<h5 id="features">Recent Features</h5> 
+</section>
+<div id="navbar">
+<nav>
+		<ul>
+			<li id="listtext"><a href = "homehtml.html" class="listtext">Home</a></li>
+			<li id="listtext"> <a href = "stories.html" class="listtext">Stories</a></li>
+			<li id="listtext">About us</li>
+		</ul>
+</nav>
+</div>
+<div class="slideshow-container">
+
+  <div class="slide">
+    <img id="imgslide" src="4.png">
+	<p id="slidepara"> Story of Mr.X </p>
+  </div>
+
+  <div class="slide">
+    <img id="imgslide" src="5.png">
+	<p id="slidepara"> Story of Mrs. Y </p>
+  </div>
+
+  <div class="slide">
+    <img id="imgslide" src="6.png">
+	<p id="slidepara"> Story of Mr. Z </p>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<div class="FooterBar">
+    <div class="content">
+        <img id="footlogo" src="D:\WEBSITE\SOCH - SITE\LOGO\pngwhite.png" width="130px" height="130px">
+            <div class="foot">2021 © All rights reserved.</div>
+    </div>
+</div>
+
+<script>
+var mb = document.getElementById("nav-btn")
+var sideNav = document.getElementById("navbar")
+mb.onclick = function()
+{
+	if(sideNav.style.right == "-250px")
+	{
+		sideNav.style.right = "0";
+		menu.src = "menuclose.png";
+	}
+	else
+	{
+		sideNav.style.right = "-250px";
+		menu.src = "nav.png";
+	}
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n)
+{
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) 
+{
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) 
+  {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) 
+  {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) 
+  {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>

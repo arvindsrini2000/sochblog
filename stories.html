@@ -1,0 +1,86 @@
+<html>
+<title>Stories</title>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Redressed&display=swap" rel="stylesheet">
+<meta name="viewport" content="width = device-width, initial scale=1">
+<link rel="stylesheet" href="homecss.css"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="body1">
+	<section id="banner">
+	<img src="D:\WEBSITE\SOCH - SITE\LOGO\pngwhite.png" class="img">
+	<div id="nav-btn">
+		<img src="nav.png" id = "menu">
+	</div>
+	<div class="b-text">
+		<h1>SOCH</h1>
+		<p><i>Stories</i></p>
+	</div>
+	
+	<div id="storycontainer">
+		<img id="scimg" src="4.png">
+		<h2 id="caption" align="center"> Mr.X </h2>
+		<div class="btn-cont2" align="center">
+		<a href="#"><span></span>Read Story</a>
+		</div>
+	</div>
+	
+	<div id="storycontainer2">
+		<img id="scimg" src="5.png">
+		<h2 id="caption" align="center"> Ms.Y </h2>
+		<div class="btn-cont2" align="center">
+		<a href="#"><span></span>Read Story</a>
+		</div>
+	</div>
+	
+	<div id="storycontainer">
+		<img id="scimg" src="6.png">
+		<h2 id="caption" align="center"> Mr.Z </h2>
+		
+		<div class="btn-cont2" align="center">
+		<a href="#"><span></span>Read Story</a>
+		</div>
+	</div>
+	
+	
+	
+	
+	<div id="navbar">
+<nav>
+		<ul>
+			<li id="listtext"><a href = "index.html" class="listtext">Home</a></li>
+			<li id="listtext"> <a href = "stories.html" class="listtext">Stories</a></li>
+			<li id="listtext">About us</li>
+		</ul>
+</nav>
+</div>
+
+
+
+<script>
+	var mb = document.getElementById("nav-btn")
+var sideNav = document.getElementById("navbar")
+mb.onclick = function()
+{
+	if(sideNav.style.right == "-250px")
+	{
+		sideNav.style.right = "0";
+		menu.src = "menuclose.png";
+	}
+	else
+	{
+		sideNav.style.right = "-250px";
+		menu.src = "nav.png";
+	}
+}
+
+</script>
+</body>
